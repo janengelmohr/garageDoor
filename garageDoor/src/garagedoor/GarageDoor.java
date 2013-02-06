@@ -10,11 +10,11 @@ package garagedoor;
  */
 public class GarageDoor {
 
-    private DoorState state;
-    private Motor myMotor;
+    private final DoorState state;
+    private final Motor myMotor;
     
     public GarageDoor() {
-        state=new Closed();
+        state=new Closed(this);
         myMotor=new Motor(this);
     }
     
